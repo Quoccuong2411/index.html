@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Shop Túi Xách - Mua Túi Đẹp Giá Tốt</title>
+<style>
+  /* Reset & cơ bản */
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+    line-height: 1.5;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  header {
+    background-color: #ff6f61;
+    color: white;
+    padding: 1.5rem 2rem;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+  }
+  main {
+    flex-grow: 1;
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    width: 100%;
+  }
+  h1 {
+    margin-bottom: 1rem;
+    text-align: center;
+    color: #ff6f61;
+    font-weight: 700;
+  }
+  /* Lưới sản phẩm */
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    gap: 1.8rem;
+  }
+  .product-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgb(0 0 0 / 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgb(0 0 0 / 0.15);
+  }
+  .product-image {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+  }
+  .product-info {
+    padding: 1rem 1.2rem 1.5rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  .product-name {
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-bottom: 0.4rem;
+    color: #ff6f61;
+  }
+  .product-desc {
+    flex-grow: 1;
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 1rem;
+  }
+  .product-price {
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: #333;
+  }
+  .buy-btn {
+    background-color: #ff6f61;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 0.7rem;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+  }
+  .buy-btn:hover {
+    background-color: #e65b50;
+  }
+  footer {
+    background-color: #333;
+    color: #eee;
+    text-align: center;
+    padding: 1rem 2rem;
+    margin-top: 3rem;
+    font-size: 0.9rem;
+  }
+  /* Responsive */
+  @media (max-width: 600px) {
+    .product-image {
+      height: 180px;
+    }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  SHOP TÚI XÁCH
+</header>
+
+<main>
+  <h1>Bộ Sưu Tập Túi Xách Mới Nhất</h1>
+  <div class="product-grid">
+
+    <div class="product-card">
+      <img class="product-image" src="D:/D:/" alt="Túi Xách Nữ Màu Đỏ" />
+      <div class="product-info">
+        <div class="product-name">Túi Xách Nữ Màu Đỏ</div>
+        <div class="product-desc">Thiết kế sang trọng, chất liệu da tổng hợp cao cấp, phù hợp đi tiệc và dạo phố.</div>
+        <div class="product-price">100,850,000₫</div>
+        <button class="buy-btn" onclick="buyNow('Túi Xách Nữ Màu Đỏ')">Mua Ngay</button>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <img class="product-image" src="/:/mywed101\tuixach2.jpg"	  alt="Túi Tote Phong Cách Retro" />
+      <div class="product-info">
+        <div class="product-name">Túi Tote Phong Cách Retro</div>
+        <div class="product-desc">Túi tote vải bố thoải mái, rộng rãi, thích hợp cho công việc và đi chơi.</div>
+        <div class="product-price">62,250,000₫</div>
+        <button class="buy-btn" onclick="buyNow('Túi Tote Phong Cách Retro')">Mua Ngay</button>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <img class="product-image" src=/mywed101\tuixach4.jpg"" alt="Túi Đeo Chéo Thời Trang" />
+      <div class="product-info">
+        <div class="product-name">Túi Đeo Chéo Thời Trang</div>
+        <div class="product-desc">Kiểu dáng hiện đại, nhỏ gọn, tiện lợi khi đi dạo hoặc du lịch.</div>
+        <div class="product-price">720,000₫</div>
+        <button class="buy-btn" onclick="buyNow('Túi Đeo Chéo Thời Trang')">Mua Ngay</button>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <img class="product-image" src="https://images.unsplash.com/photo-1503602642458-232111445657?auto=format&fit=crop&w=600&q=80" alt="Balo Mini Thời Trang" />
+      <div class="product-info">
+        <div class="product-name">Balo Mini Thời Trang</div>
+        <div class="product-desc">Balo nhỏ gọn, phong cách năng động, phù hợp đi học và đi chơi.</div>
+        <div class="product-price">780,000₫</div>
+        <button class="buy-btn" onclick="buyNow('Balo Mini Thời Trang')">Mua Ngay</button>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <img class="product-image" src="https://images.unsplash.com/photo-1523206489230-68e1f41709d0?auto=format&fit=crop&w=600&q=80" alt="Túi Xách Tay Cỡ Lớn" />
+      <div class="product-info">
+        <div class="product-name">Túi Xách Tay Cỡ Lớn</div>
+        <div class="product-desc">Túi xách tay rộng rãi, phù hợp đi làm và đựng nhiều đồ dùng.</div>
+        <div class="product-price">1,200,000₫</div>
+        <button class="buy-btn" onclick="buyNow('Túi Xách Tay Cỡ Lớn')">Mua Ngay</button>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <img class="product-image" src="https://images.unsplash.com/photo-1520975915804-8f14a3f94e8e?auto=format&fit=crop&w=600&q=80" alt="Túi Đeo Vai Nữ" />
+      <div class="product-info">
+        <div class="product-name">Túi Đeo Vai Nữ</div>
+        <div class="product-desc">Phong cách cổ điển, dây đeo vai tiện lợi, màu sắc trang nhã.</div>
+        <div class="product-price">680,000₫</div>
+        <button class="buy-btn" onclick="buyNow('Túi Đeo Vai Nữ')">Mua Ngay</button>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <img class="product-image" src="https://images.unsplash.com/photo-1493809842364-78817add7ffb?auto=format&fit=crop&w=600&q=80" alt="Túi Đeo Hông Năng Động" />
+      <div class="product-info">
+        <div class="product-name">Túi Đeo Hông Năng Động</div>
+        <div class="product-desc">Phù hợp cho các bạn trẻ yêu thích phong cách thể thao, tiện lợi.</div>
+        <div class="product-price">590,000₫</div>
+        <button class="buy-btn" onclick="buyNow('Túi Đeo Hông Năng Động')">Mua Ngay</button>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <img class="product-image" src="https://images.unsplash.com/photo-1533632064505-79f0f09a26ae?auto=format&fit=crop&w=600&q=80" alt="Túi Cầm Tay Dự Tiệc" />
+      <div class="product-info">
+        <div class="product-name">Túi Cầm Tay Dự Tiệc</div>
+        <div class="product-desc">Nhỏ gọn, thiết kế tinh tế, phù hợp cho các buổi tiệc sang trọng.</div>
+        <div class="product-price">950,000₫</div>
+        <button class="buy-btn" onclick="buyNow('Túi Cầm Tay Dự Tiệc')">Mua Ngay</button>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+<footer>
+  &copy; 2025 Shop Túi Xách. Mọi quyền được bảo lưu.
+</footer>
+
+<script>
+  function buyNow(productName) {
+    alert(`Cảm ơn bạn đã chọn mua sản phẩm: "${productName}".\nChúng tôi sẽ liên hệ lại với bạn sớm nhất!`);
+  }
+</script>
+
+</body>
+</html>
